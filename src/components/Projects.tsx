@@ -15,11 +15,11 @@ const Projects: React.FC = () => {
     },
     {
       id: 2,
-      title: 'CI/CD Pipeline Automation',
-      description: 'Built comprehensive CI/CD pipelines that reduced deployment time by 75% and increased deployment frequency.',
+      title: 'CI/CD Pipeline with Flask',
+      description: 'Implemented a complete CI/CD pipeline using Docker, Jenkins, and Flask. Features automated testing, containerization, and deployment with Python Flask application.',
       image: 'https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=500',
-      technologies: ['Jenkins', 'Docker', 'GitLab CI', 'Bash'],
-      github: '#',
+      technologies: ['Docker', 'Jenkins', 'Python', 'Flask', 'Linux'],
+      github: 'https://github.com/cheshta1710/cicd.git',
       demo: '#',
       gradient: 'from-purple-400 to-pink-500'
     },
