@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  font-family: 'Copperplate Gothic Light', 'Inter', sans-serif;
+  font-family: 'Candara', 'Inter', sans-serif;
   background: #000000;
   color: #ffffff;
   cursor: none;
@@ -162,6 +162,16 @@ body {
   }
 }
 
+/* Matrix-like background animation */
+@keyframes matrix-rain {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
@@ -307,15 +317,21 @@ a:focus {
 
 /* Professional color scheme */
 .bg-professional {
-  background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #2d2d2d 100%);
+  background: #000000;
 }
 
 .text-professional {
-  color: #e2e8f0;
+  color: #ffffff;
 }
 
 .border-professional {
-  border-color: #475569;
+  border-color: #3b82f6;
+}
+
+/* Glowing blue border effect */
+.glow-border {
+  border: 2px solid #3b82f6;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5), 0 0 20px rgba(59, 130, 246, 0.3);
 }
 
 /* Responsive adjustments */

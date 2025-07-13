@@ -18,15 +18,15 @@ const About: React.FC = () => {
 
   return (
     <section id="about" className="py-20 bg-black relative overflow-hidden">
-      {/* Background Animation */}
+      {/* Clean Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-10 right-10 w-64 h-64 bg-gradient-to-r from-blue-500/10 to-blue-600/10 rounded-full blur-3xl animate-float-slow"></div>
-        <div className="absolute bottom-10 left-10 w-48 h-48 bg-gradient-to-r from-blue-600/10 to-blue-700/10 rounded-full blur-3xl animate-float-slow animation-delay-2000"></div>
+        <div className="absolute top-10 right-10 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 left-10 w-48 h-48 bg-blue-600/5 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white" style={{fontFamily: 'Copperplate Gothic Bold, serif'}}>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white glow-border p-6 rounded-lg" style={{fontFamily: 'Copperplate Gothic Bold, serif'}}>
             About Me
           </h2>
           
@@ -41,7 +41,7 @@ const About: React.FC = () => {
                 {bulletPoints.map((point, index) => (
                   <div key={index} className="flex items-start space-x-4 group animate-slide-in-left" style={{animationDelay: `${index * 200}ms`}}>
                     <div className="w-3 h-3 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full mt-3 flex-shrink-0 group-hover:scale-150 transition-transform duration-300"></div>
-                    <p className="text-gray-300 leading-relaxed group-hover:text-white transition-colors duration-300" style={{fontFamily: 'Copperplate Gothic Light, serif'}}>{point}</p>
+                    <p className="text-gray-300 leading-relaxed group-hover:text-white transition-colors duration-300" style={{fontFamily: 'Candara, sans-serif'}}>{point}</p>
                   </div>
                 ))}
               </div>
@@ -65,7 +65,7 @@ const About: React.FC = () => {
               {skillsFlow.map((category, index) => (
                 <div
                   key={index}
-                  className="group relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-blue-500/50 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 animate-fade-in-up"
+                  className="group relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 hover:border-blue-400 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 animate-fade-in-up glow-border"
                   style={{animationDelay: `${index * 150}ms`}}
                 >
                   {/* Animated background gradient - only border on hover */}
@@ -83,7 +83,7 @@ const About: React.FC = () => {
                         <div
                           key={skillIndex}
                           className={`bg-gradient-to-r ${category.color} bg-opacity-10 border border-blue-500/20 rounded-full px-4 py-2 text-sm text-white hover:text-blue-300 hover:border-blue-500/50 transition-all duration-300 transform hover:scale-105`}
-                          style={{fontFamily: 'Copperplate Gothic Light, serif'}}
+                          style={{fontFamily: 'Candara, sans-serif'}}
                         >
                           {skill}
                         </div>

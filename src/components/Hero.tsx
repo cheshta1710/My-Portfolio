@@ -4,17 +4,28 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 const Hero: React.FC = () => {
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
-      {/* Professional Background */}
+      {/* Matrix-like Background Animation */}
       <div className="absolute inset-0">
+        {/* Matrix rain effect */}
+        {[...Array(50)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute text-blue-400 text-xs opacity-20 animate-matrix-rain"
+            style={{
+              left: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 5}s`,
+              animationDuration: `${3 + Math.random() * 2}s`
+            }}
+          >
+            {String.fromCharCode(0x30A0 + Math.random() * 96)}
+          </div>
+        ))}
+        
         {/* Subtle grid pattern */}
         <div className="absolute inset-0 opacity-5" style={{
           backgroundImage: `radial-gradient(circle at 1px 1px, rgba(59, 130, 246, 0.3) 1px, transparent 0)`,
           backgroundSize: '50px 50px'
         }}></div>
-        
-        {/* Subtle gradient lines */}
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-20"></div>
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-20"></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -23,19 +34,19 @@ const Hero: React.FC = () => {
           <div className="space-y-8 animate-fade-in-up">
             {/* Name with Copperplate Gothic Bold */}
             <div className="space-y-4">
-              <h1 className="text-5xl md:text-7xl font-bold text-white" style={{fontFamily: 'Copperplate Gothic Bold, serif'}}>
+              <h1 className="text-5xl md:text-7xl font-bold text-white glow-border p-8 rounded-lg" style={{fontFamily: 'Copperplate Gothic Bold, serif'}}>
                 Cheshta Agarwal
               </h1>
               <div className="h-1 w-32 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto animate-expand"></div>
             </div>
             
             {/* Title */}
-            <p className="text-xl md:text-2xl text-gray-300 font-light animate-fade-in-up animation-delay-500" style={{fontFamily: 'Copperplate Gothic Light, serif'}}>
+            <p className="text-xl md:text-2xl text-white font-light animate-fade-in-up animation-delay-500" style={{fontFamily: 'Copperplate Gothic Bold, serif'}}>
               DevOps Engineer & Containerization Specialist
             </p>
             
             {/* Description */}
-            <p className="text-gray-400 max-w-2xl mx-auto leading-relaxed animate-fade-in-up animation-delay-1000" style={{fontFamily: 'Copperplate Gothic Light, serif'}}>
+            <p className="text-gray-300 max-w-2xl mx-auto leading-relaxed animate-fade-in-up animation-delay-1000" style={{fontFamily: 'Candara, sans-serif'}}>
               Passionate about building scalable infrastructure and automating deployment pipelines. 
               Specializing in Kubernetes, Docker, and CI/CD practices.
             </p>
@@ -46,7 +57,7 @@ const Hero: React.FC = () => {
                 href="https://github.com/cheshta1710"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="social-icon group p-4 bg-slate-800/50 backdrop-blur-sm rounded-full text-gray-300 hover:text-blue-400 hover:bg-slate-700/50 transition-all duration-500 transform hover:scale-110 hover:rotate-12 border border-slate-700 hover:border-blue-400"
+                className="social-icon group p-4 bg-slate-800/50 backdrop-blur-sm rounded-full text-white hover:text-blue-400 hover:bg-slate-700/50 transition-all duration-500 transform hover:scale-110 hover:rotate-12 border border-blue-400/30 hover:border-blue-400 glow-border"
                 data-cursor-hover
               >
                 <Github size={28} className="group-hover:animate-bounce" />
@@ -55,14 +66,14 @@ const Hero: React.FC = () => {
                 href="https://www.linkedin.com/in/cheshta-agarwal-7a8592292"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="social-icon group p-4 bg-slate-800/50 backdrop-blur-sm rounded-full text-gray-300 hover:text-blue-400 hover:bg-slate-700/50 transition-all duration-500 transform hover:scale-110 hover:rotate-12 border border-slate-700 hover:border-blue-400"
+                className="social-icon group p-4 bg-slate-800/50 backdrop-blur-sm rounded-full text-white hover:text-blue-400 hover:bg-slate-700/50 transition-all duration-500 transform hover:scale-110 hover:rotate-12 border border-blue-400/30 hover:border-blue-400 glow-border"
                 data-cursor-hover
               >
                 <Linkedin size={28} className="group-hover:animate-bounce" />
               </a>
               <a
                 href="mailto:cheshtaagarwal17@gmail.com"
-                className="social-icon group p-4 bg-slate-800/50 backdrop-blur-sm rounded-full text-gray-300 hover:text-blue-400 hover:bg-slate-700/50 transition-all duration-500 transform hover:scale-110 hover:rotate-12 border border-slate-700 hover:border-blue-400"
+                className="social-icon group p-4 bg-slate-800/50 backdrop-blur-sm rounded-full text-white hover:text-blue-400 hover:bg-slate-700/50 transition-all duration-500 transform hover:scale-110 hover:rotate-12 border border-blue-400/30 hover:border-blue-400 glow-border"
                 data-cursor-hover
               >
                 <Mail size={28} className="group-hover:animate-bounce" />

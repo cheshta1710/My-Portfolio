@@ -3,10 +3,26 @@ import React, { useEffect, useState } from 'react';
 const CustomCursor: React.FC = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
+  const [sparkles, setSparkles] = useState<Array<{id: number, x: number, y: number, opacity: number}>>([]);
 
   useEffect(() => {
     const updateCursor = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
+      
+      // Create sparkles when mouse moves
+      const newSparkle = {
+        id: Date.now(),
+        x: e.clientX + (Math.random() - 0.5) * 30,
+        y: e.clientY + (Math.random() - 0.5) * 30,
+        opacity: 1
+      };
+      
+      setSparkles(prev => [...prev.slice(-8), newSparkle]);
+      
+      // Remove sparkles after animation
+      setTimeout(() => {
+        setSparkles(prev => prev.filter(s => s.id !== newSparkle.id));
+      }, 1500);
     };
 
     const handleMouseEnter = () => setIsHovering(true);
@@ -35,7 +51,7 @@ const CustomCursor: React.FC = () => {
     <>
       {/* Main cursor dot */}
       <div
-        className="fixed top-0 left-0 w-3 h-3 bg-blue-400 rounded-full pointer-events-none z-50 transition-all duration-300 ease-out"
+        className="fixed top-0 left-0 w-3 h-3 bg-white rounded-full pointer-events-none z-50 transition-all duration-300 ease-out glow-border"
         style={{
           transform: `translate(${position.x - 6}px, ${position.y - 6}px)`,
         }}
@@ -58,6 +74,20 @@ const CustomCursor: React.FC = () => {
           transform: `translate(${position.x - 2}px, ${position.y - 2}px)`,
         }}
       />
+      
+      {/* Sparkles */}
+      {sparkles.map((sparkle) => (
+        <div
+          key={sparkle.id}
+          className="fixed w-2 h-2 bg-gradient-to-r from-blue-400 to-white rounded-full pointer-events-none z-40 animate-pulse"
+          style={{
+            left: sparkle.x,
+            top: sparkle.y,
+            opacity: sparkle.opacity,
+            animation: 'sparkle-fade 1.5s ease-out forwards'
+          }}
+        />
+      ))}
     </>
   );
 };
