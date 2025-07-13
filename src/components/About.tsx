@@ -11,10 +11,8 @@ const About: React.FC = () => {
 
   const skillsFlow = [
     { category: 'Containerization', skills: ['Docker', 'Podman'], icon: '📦', color: 'from-cyan-400 to-blue-500' },
-    { category: 'Orchestration', skills: ['Kubernetes', 'Docker Swarm'], icon: '⚙️', color: 'from-purple-400 to-pink-500' },
+    { category: 'Orchestration', skills: ['Kubernetes'], icon: '⚙️', color: 'from-purple-400 to-pink-500' },
     { category: 'CI/CD', skills: ['Jenkins', 'GitLab CI', 'GitHub Actions'], icon: '🔄', color: 'from-pink-400 to-red-500' },
-    { category: 'Infrastructure', skills: ['Terraform', 'Ansible'], icon: '🏗️', color: 'from-green-400 to-cyan-500' },
-    { category: 'Monitoring', skills: ['Prometheus', 'Grafana'], icon: '📊', color: 'from-yellow-400 to-orange-500' },
     { category: 'Cloud Platforms', skills: ['AWS', 'Azure'], icon: '☁️', color: 'from-indigo-400 to-purple-500' }
   ];
 
@@ -53,9 +51,6 @@ const About: React.FC = () => {
             <div className="flex justify-center items-center animate-fade-in-up animation-delay-500">
               <div className="relative">
                 <DevOpsIconsBackground />
-                {/* Floating elements */}
-                <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full animate-pulse"></div>
-                <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full animate-pulse animation-delay-1000"></div>
               </div>
             </div>
           </div>
@@ -66,7 +61,7 @@ const About: React.FC = () => {
               Technical Expertise
               <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-cyan-400 to-purple-500"></div>
             </h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {skillsFlow.map((category, index) => (
                 <div
                   key={index}

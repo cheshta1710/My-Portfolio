@@ -100,6 +100,17 @@ body {
   }
 }
 
+@keyframes sparkle-fade {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -261,29 +272,27 @@ body {
   transform: translateX(0);
 }
 
-/* Enhanced hover effects */
+/* Hover effects */
 .nav-link:hover {
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  color: #00ffff;
 }
 
 .social-icon:hover {
-  filter: drop-shadow(0 0 10px currentColor);
+  transform: scale(1.2) rotate(5deg);
 }
 
-/* Smooth transitions */
+/* Global styles */
 * {
-  transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
-/* Focus styles */
 button:focus,
-input:focus,
-textarea:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px #00ffff, 0 0 20px rgba(0, 255, 255, 0.3);
+a:focus {
+  outline: 2px solid #00ffff;
+  outline-offset: 2px;
 }
 
-/* Mobile optimizations */
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .cursor-none {
     cursor: auto;
@@ -294,23 +303,19 @@ textarea:focus {
   }
   
   .animate-float-slow,
-  .animate-pulse-glow,
-  .animate-text-shimmer {
-    animation-duration: 6s;
+  .animate-pulse-slow {
+    animation: none;
   }
-}
-
-/* Backdrop blur support */
-@supports (backdrop-filter: blur(10px)) {
+  
   .backdrop-blur-sm {
-    backdrop-filter: blur(4px);
+    backdrop-filter: none;
   }
   
   .backdrop-blur-md {
-    backdrop-filter: blur(12px);
+    backdrop-filter: none;
   }
   
   .backdrop-blur-xl {
-    backdrop-filter: blur(24px);
+    backdrop-filter: none;
   }
 }

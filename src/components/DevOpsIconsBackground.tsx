@@ -66,22 +66,6 @@ const DevOpsIconsBackground: React.FC = () => {
       <div className="absolute bottom-8 right-8 text-4xl animate-float animation-delay-3000 transition-all duration-1000 opacity-70">
         {currentSet.icons[0]}
       </div>
-
-      {/* Animated particles */}
-      <div className="absolute inset-0 pointer-events-none">
-        {[...Array(6)].map((_, i) => (
-          <div
-            key={i}
-            className={`absolute w-2 h-2 bg-gradient-to-r ${currentSet.gradient} rounded-full animate-float opacity-40`}
-            style={{
-              left: `${20 + (i * 12)}%`,
-              top: `${30 + (i * 8)}%`,
-              animationDelay: `${i * 500}ms`,
-              animationDuration: `${3 + (i * 0.5)}s`
-            }}
-          ></div>
-        ))}
-      </div>
     </div>
   );
 };
