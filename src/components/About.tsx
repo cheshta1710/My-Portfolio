@@ -94,7 +94,7 @@ const About: React.FC = () => {
               <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 transform -translate-y-1/2"></div>
               
               {/* Timeline Items */}
-              <div className="relative flex justify-between items-center">
+              <div className="relative flex justify-between items-center px-8">
                 {skillsFlow.map((category, index) => (
                   <div
                     key={index}
@@ -105,29 +105,32 @@ const About: React.FC = () => {
                   >
                     {/* Hover Popup */}
                     {hoveredCategory === category.category && (
-                      <div className="absolute bottom-full mb-4 left-1/2 transform -translate-x-1/2 z-50 animate-fade-in-up">
-                        <div className="bg-slate-900/95 backdrop-blur-xl rounded-xl p-4 w-80 border border-blue-400/30 shadow-2xl">
+                      <div 
+                        className="absolute bottom-full mb-6 left-1/2 transform -translate-x-1/2 z-50 animate-fade-in-up"
+                        onMouseEnter={() => setHoveredCategory(category.category)}
+                        onMouseLeave={() => setHoveredCategory(null)}
+                      >
+                        <div className="bg-slate-900/95 backdrop-blur-xl rounded-xl p-6 w-96 border border-blue-400/30 shadow-2xl">
                           {/* Header */}
-                          <div className="flex items-center space-x-3 mb-3">
-                            <div className={`w-8 h-8 bg-gradient-to-r ${category.color} rounded-full flex items-center justify-center text-sm flex-shrink-0`}>
+                          <div className="flex items-start space-x-4 mb-4">
+                            <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-full flex items-center justify-center text-xl flex-shrink-0`}>
                               {category.icon}
                             </div>
-                            <div className="min-w-0 flex-1">
-                              <h4 className="text-base font-bold text-white truncate" style={{fontFamily: 'Copperplate Gothic Bold, serif'}}>
+                            <div className="flex-1 min-w-0">
+                              <h4 className="text-lg font-bold text-white mb-2" style={{fontFamily: 'Copperplate Gothic Bold, serif'}}>
                                 {category.category}
                               </h4>
-                              <p className="text-gray-400 text-xs truncate">{category.description}</p>
+                              <p className="text-gray-400 text-sm leading-relaxed">{category.description}</p>
                             </div>
                           </div>
                           
                           {/* Skills Grid */}
-                          <div className="grid grid-cols-3 gap-2">
+                          <div className="grid grid-cols-2 gap-3">
                             {category.skills.map((skill, skillIndex) => (
                               <div
                                 key={skillIndex}
-                                className={`bg-gradient-to-r ${category.color} bg-opacity-10 border border-blue-500/20 rounded-lg px-2 py-1 text-center text-white text-xs hover:text-blue-300 hover:border-blue-500/50 transition-all duration-300 truncate`}
+                                className={`bg-gradient-to-r ${category.color} bg-opacity-10 border border-blue-500/20 rounded-lg px-4 py-3 text-center text-white text-sm hover:text-blue-300 hover:border-blue-500/50 transition-all duration-300`}
                                 style={{fontFamily: 'Candara, sans-serif'}}
-                                title={skill}
                               >
                                 {skill}
                               </div>
@@ -135,24 +138,24 @@ const About: React.FC = () => {
                           </div>
                           
                           {/* Arrow */}
-                          <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-slate-900/95"></div>
+                          <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-6 border-r-6 border-t-6 border-transparent border-t-slate-900/95"></div>
                         </div>
                       </div>
                     )}
                     
                     {/* Timeline Node */}
-                    <div className={`w-20 h-20 bg-gradient-to-r ${category.color} rounded-full flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-2xl`}>
+                    <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-full flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-2xl`}>
                       {category.icon}
                     </div>
                     
                     {/* Category Title */}
-                    <h4 className="text-xl font-semibold text-white text-center mb-2 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-blue-400 group-hover:to-blue-600 transition-all duration-300" style={{fontFamily: 'Copperplate Gothic Bold, serif'}}>
+                    <h4 className="text-lg font-semibold text-white text-center mb-2 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-blue-400 group-hover:to-blue-600 transition-all duration-300 max-w-24" style={{fontFamily: 'Copperplate Gothic Bold, serif'}}>
                       {category.category}
                     </h4>
                     
                     {/* Connection Line */}
                     {index < skillsFlow.length - 1 && (
-                      <div className="absolute top-10 left-full w-16 h-0.5 bg-gradient-to-r from-blue-400 to-blue-600 transform translate-x-8"></div>
+                      <div className="absolute top-8 left-full w-12 h-0.5 bg-gradient-to-r from-blue-400 to-blue-600 transform translate-x-8"></div>
                     )}
                   </div>
                 ))}

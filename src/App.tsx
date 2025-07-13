@@ -11,7 +11,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="bg-black min-h-screen text-white overflow-x-hidden cursor-none px-12 md:px-24 lg:px-40 xl:px-56">
+    <div className="bg-black min-h-screen text-white overflow-x-hidden cursor-none px-16 md:px-32 lg:px-48 xl:px-64 py-8">
       <CustomCursor />
       <ScrollProgress />
       <Header />

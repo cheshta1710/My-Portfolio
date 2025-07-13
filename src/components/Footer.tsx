@@ -10,17 +10,17 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-black border-t border-gray-800 py-16 relative overflow-hidden">
+    <footer className="bg-black border-t border-gray-800 py-20 relative overflow-hidden">
       {/* Background Animation */}
       <div className="absolute inset-0">
         <div className="absolute top-10 left-1/4 w-64 h-64 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 rounded-full blur-3xl animate-float-slow"></div>
         <div className="absolute bottom-10 right-1/4 w-48 h-48 bg-gradient-to-r from-pink-500/5 to-cyan-500/5 rounded-full blur-3xl animate-float-slow animation-delay-2000"></div>
       </div>
 
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-8">
-        <div className="grid md:grid-cols-4 gap-12">
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-12">
+        <div className="grid md:grid-cols-4 gap-16">
           {/* Brand */}
-          <div className="space-y-6 animate-fade-in-up">
+          <div className="space-y-8 animate-fade-in-up">
             <div className="text-3xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
               Cheshta Agarwal
             </div>
@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-6 animate-fade-in-up animation-delay-200">
+          <div className="space-y-8 animate-fade-in-up animation-delay-200">
             <h3 className="text-white font-semibold text-lg relative">
               Quick Links
               <div className="absolute -bottom-1 left-0 w-8 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500"></div>
@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-6 animate-fade-in-up animation-delay-400">
+          <div className="space-y-8 animate-fade-in-up animation-delay-400">
             <h3 className="text-white font-semibold text-lg relative">
               Contact
               <div className="absolute -bottom-1 left-0 w-8 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500"></div>
@@ -91,7 +91,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Social Links */}
-          <div className="space-y-6 animate-fade-in-up animation-delay-600">
+          <div className="space-y-8 animate-fade-in-up animation-delay-600">
             <h3 className="text-white font-semibold text-lg relative">
               Connect
               <div className="absolute -bottom-1 left-0 w-8 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500"></div>
@@ -126,7 +126,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center animate-fade-in-up animation-delay-800">
+        <div className="border-t border-gray-800 mt-16 pt-10 text-center animate-fade-in-up animation-delay-800">
           <p className="text-gray-400 text-sm">
             © 2024 Cheshta Agarwal. All rights reserved.
           </p>
