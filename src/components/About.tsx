@@ -106,7 +106,7 @@ const About: React.FC = () => {
                     {/* Hover Popup */}
                     {hoveredCategory === category.category && (
                       <div 
-                        className="absolute bottom-full mb-6 left-1/2 transform -translate-x-1/2 z-50 animate-fade-in-up"
+                        className="absolute bottom-full mb-8 left-1/2 transform -translate-x-1/2 z-50 animate-fade-in-up"
                         onMouseEnter={() => setHoveredCategory(category.category)}
                         onMouseLeave={() => setHoveredCategory(null)}
                         style={{
