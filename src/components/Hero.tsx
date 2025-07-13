@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
         <div className="absolute top-0 right-0 w-px h-full bg-gradient-to-b from-transparent via-blue-500/20 to-transparent"></div>
       </div>
 
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-4">
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-8">
         <div className="text-center max-w-4xl mx-auto">
           {/* Main Content */}
           <div className="space-y-8 animate-fade-in-up">
