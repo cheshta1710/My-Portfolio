@@ -17,7 +17,7 @@ const About: React.FC = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-slate-900 relative overflow-hidden">
+    <section id="about" className="py-20 bg-black relative overflow-hidden">
       {/* Background Animation */}
       <div className="absolute inset-0">
         <div className="absolute top-10 right-10 w-64 h-64 bg-gradient-to-r from-blue-500/10 to-blue-600/10 rounded-full blur-3xl animate-float-slow"></div>

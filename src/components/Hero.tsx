@@ -3,7 +3,7 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-professional">
+    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
       {/* Professional Background */}
       <div className="absolute inset-0">
         {/* Subtle grid pattern */}
