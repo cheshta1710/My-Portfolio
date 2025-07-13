@@ -4,11 +4,8 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 const Hero: React.FC = () => {
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
-      {/* Clean Professional Background */}
+      {/* Plain Black Background */}
       <div className="absolute inset-0">
-        {/* Subtle gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-slate-900 to-black"></div>
-        
         {/* Subtle grid pattern */}
         <div className="absolute inset-0 opacity-10" style={{
           backgroundImage: `radial-gradient(circle at 1px 1px, rgba(59, 130, 246, 0.3) 1px, transparent 0)`,
