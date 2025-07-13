@@ -14,7 +14,7 @@ const About: React.FC = () => {
   const skillsFlow = [
     { 
       category: 'Containerization', 
-      skills: ['Docker', 'Podman', 'Container Images', 'Registry Management'], 
+      skills: ['Docker', 'Podman', 'Container Images'], 
       icon: '📦', 
       color: 'from-blue-400 to-blue-600',
       description: 'Containerization technologies for packaging and deploying applications'
@@ -83,9 +83,9 @@ const About: React.FC = () => {
 
           {/* Technical Skills Timeline */}
           <div className="space-y-12">
-            <h3 className="text-3xl font-semibold text-white text-center mb-12 relative inline-block px-8 py-4 bg-gradient-to-r from-blue-900/50 to-blue-800/50 rounded-lg border border-blue-400/30" style={{fontFamily: 'Copperplate Gothic Bold, serif'}}>
+            <h3 className="text-3xl font-semibold text-white mb-8 relative" style={{fontFamily: 'Copperplate Gothic Bold, serif'}}>
               Technical Expertise
-              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-blue-400 to-blue-600"></div>
+              <div className="absolute -bottom-2 left-0 w-20 h-1 bg-gradient-to-r from-blue-400 to-blue-600"></div>
             </h3>
             
             {/* Timeline Container */}
@@ -105,28 +105,29 @@ const About: React.FC = () => {
                   >
                     {/* Hover Popup */}
                     {hoveredCategory === category.category && (
-                      <div className="absolute bottom-full mb-4 left-1/2 transform -translate-x-1/2 z-50">
-                        <div className="bg-slate-900/95 backdrop-blur-xl rounded-2xl p-6 max-w-xs w-full border border-blue-400/30 shadow-2xl">
+                      <div className="absolute bottom-full mb-4 left-1/2 transform -translate-x-1/2 z-50 animate-fade-in-up">
+                        <div className="bg-slate-900/95 backdrop-blur-xl rounded-xl p-4 w-80 border border-blue-400/30 shadow-2xl">
                           {/* Header */}
-                          <div className="flex items-center space-x-3 mb-4">
-                            <div className={`w-10 h-10 bg-gradient-to-r ${category.color} rounded-full flex items-center justify-center text-lg`}>
+                          <div className="flex items-center space-x-3 mb-3">
+                            <div className={`w-8 h-8 bg-gradient-to-r ${category.color} rounded-full flex items-center justify-center text-sm flex-shrink-0`}>
                               {category.icon}
                             </div>
-                            <div>
-                              <h4 className="text-lg font-bold text-white" style={{fontFamily: 'Copperplate Gothic Bold, serif'}}>
+                            <div className="min-w-0 flex-1">
+                              <h4 className="text-base font-bold text-white truncate" style={{fontFamily: 'Copperplate Gothic Bold, serif'}}>
                                 {category.category}
                               </h4>
-                              <p className="text-gray-400 text-xs">{category.description}</p>
+                              <p className="text-gray-400 text-xs truncate">{category.description}</p>
                             </div>
                           </div>
                           
                           {/* Skills Grid */}
-                          <div className="grid grid-cols-2 gap-2">
+                          <div className="grid grid-cols-3 gap-2">
                             {category.skills.map((skill, skillIndex) => (
                               <div
                                 key={skillIndex}
-                                className={`bg-gradient-to-r ${category.color} bg-opacity-10 border border-blue-500/20 rounded-lg px-3 py-2 text-center text-white text-sm hover:text-blue-300 hover:border-blue-500/50 transition-all duration-300`}
+                                className={`bg-gradient-to-r ${category.color} bg-opacity-10 border border-blue-500/20 rounded-lg px-2 py-1 text-center text-white text-xs hover:text-blue-300 hover:border-blue-500/50 transition-all duration-300 truncate`}
                                 style={{fontFamily: 'Candara, sans-serif'}}
+                                title={skill}
                               >
                                 {skill}
                               </div>
