@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, Github } from 'lucide-react';
+import { Github } from 'lucide-react';
 
 const Projects: React.FC = () => {
   const projects = [
@@ -9,8 +9,7 @@ const Projects: React.FC = () => {
       description: 'Implemented a complete CI/CD pipeline using Docker, Jenkins, and Flask. Features automated testing, containerization, and deployment with Python Flask application.',
       image: 'https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=500',
       technologies: ['Docker', 'Jenkins', 'Python', 'Flask', 'Linux'],
-      github: 'https://github.com/cheshta1710/cicd.git',
-      demo: '#'
+      github: 'https://github.com/cheshta1710/cicd.git'
     },
     {
       id: 2,
@@ -18,8 +17,7 @@ const Projects: React.FC = () => {
       description: 'Designed and implemented a multi-node Kubernetes cluster with automated deployment pipelines using Jenkins and Docker.',
       image: 'https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=500',
       technologies: ['Kubernetes', 'Docker', 'Jenkins', 'YAML'],
-      github: '#',
-      demo: '#'
+      github: '#'
     },
     {
       id: 3,
@@ -27,8 +25,7 @@ const Projects: React.FC = () => {
       description: 'Developed reusable infrastructure templates using Terraform and Ansible for cloud resource management.',
       image: 'https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&w=500',
       technologies: ['Terraform', 'Ansible', 'AWS', 'Linux'],
-      github: '#',
-      demo: '#'
+      github: '#'
     },
     {
       id: 4,
@@ -36,8 +33,7 @@ const Projects: React.FC = () => {
       description: 'Orchestrated microservices architecture using Docker Swarm and Kubernetes for scalable application deployment.',
       image: 'https://images.pexels.com/photos/1181472/pexels-photo-1181472.jpeg?auto=compress&cs=tinysrgb&w=500',
       technologies: ['Docker', 'Kubernetes', 'Microservices', 'Monitoring'],
-      github: '#',
-      demo: '#'
+      github: '#'
     }
   ];
 
@@ -91,22 +87,14 @@ const Projects: React.FC = () => {
                     ))}
                   </div>
                   
-                  <div className="flex space-x-6">
+                  <div className="flex justify-start">
                     <a
                       href={project.github}
                       className="flex items-center space-x-2 text-gray-400 hover:text-blue-400 transition-all duration-300 transform hover:scale-110"
                       data-cursor-hover
                     >
                       <Github size={20} className="group-hover:animate-spin" />
-                      <span>Code</span>
-                    </a>
-                    <a
-                      href={project.demo}
-                      className="flex items-center space-x-2 text-gray-400 hover:text-blue-400 transition-all duration-300 transform hover:scale-110"
-                      data-cursor-hover
-                    >
-                      <ExternalLink size={20} className="group-hover:animate-bounce" />
-                      <span>Demo</span>
+                      <span>View Code</span>
                     </a>
                   </div>
                 </div>

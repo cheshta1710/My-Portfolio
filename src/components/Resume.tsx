@@ -14,23 +14,23 @@ const Resume: React.FC = () => {
     <section id="resume" className="py-20 bg-black relative overflow-hidden">
       {/* Background Animation */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl animate-pulse-slow"></div>
       </div>
 
       <div className="relative z-10 w-full max-w-4xl mx-auto px-8">
         <div className="max-w-4xl text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-text-shimmer" style={{textShadow: '0 0 20px rgba(34, 211, 238, 0.8), 0 0 40px rgba(147, 51, 234, 0.4), 0 0 60px rgba(236, 72, 153, 0.2)'}}>
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white" style={{fontFamily: 'Copperplate Gothic Bold, serif', textShadow: '0 0 20px rgba(59, 130, 246, 0.8), 0 0 40px rgba(59, 130, 246, 0.4), 0 0 60px rgba(59, 130, 246, 0.2)'}}>
             DOWNLOAD RESUME
           </h2>
           
-          <p className="text-gray-400 mb-12 max-w-2xl mx-auto text-lg animate-fade-in-up animation-delay-500">
+          <p className="text-gray-400 mb-12 max-w-2xl mx-auto text-lg animate-fade-in-up animation-delay-500" style={{fontFamily: 'Candara, sans-serif'}}>
             Get a comprehensive overview of my experience, skills, and achievements in DevOps engineering and containerization.
           </p>
           
           <div className="flex justify-center animate-fade-in-up animation-delay-1000">
             <button
               onClick={downloadResume}
-              className="group relative overflow-hidden bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-6 px-12 rounded-2xl transition-all duration-500 transform hover:scale-110 hover:shadow-2xl hover:shadow-cyan-500/25"
+              className="group relative overflow-hidden bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold py-6 px-12 rounded-2xl transition-all duration-500 transform hover:scale-110 hover:shadow-2xl hover:shadow-blue-500/25"
               data-cursor-hover
             >
               <span className="relative z-10 flex items-center space-x-4 text-lg">
@@ -38,11 +38,11 @@ const Resume: React.FC = () => {
                 <span>Download Resume</span>
                 <Download size={24} className="group-hover:animate-bounce animation-delay-200" />
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-700 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
               
               {/* Animated border */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
-              <div className="absolute inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 to-purple-600 group-hover:from-purple-600 group-hover:to-pink-500"></div>
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-400 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
+              <div className="absolute inset-1 rounded-2xl bg-gradient-to-r from-blue-500 to-blue-600 group-hover:from-blue-600 group-hover:to-blue-700"></div>
             </button>
           </div>
         </div>

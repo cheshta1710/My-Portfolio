@@ -11,7 +11,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="bg-black min-h-screen text-white overflow-x-hidden cursor-none px-20 md:px-40 lg:px-56 xl:px-72 py-10">
+    <div className="bg-black min-h-screen text-white overflow-x-hidden cursor-none px-8 md:px-16 lg:px-24 xl:px-32 py-10">
       <CustomCursor />
       <ScrollProgress />
       <Header />
@@ -27,28 +27,28 @@ function App() {
         
         {/* Section Separator 2 */}
         <div className="relative h-16 flex items-center justify-center">
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent h-0.5"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/30 to-transparent h-0.5"></div>
         </div>
         
         <Projects />
         
         {/* Section Separator 3 */}
         <div className="relative h-16 flex items-center justify-center">
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-500/30 to-transparent h-0.5"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/30 to-transparent h-0.5"></div>
         </div>
         
         <Resume />
         
         {/* Section Separator 4 */}
         <div className="relative h-16 flex items-center justify-center">
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-pink-500/30 to-transparent h-0.5"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/30 to-transparent h-0.5"></div>
         </div>
         
         <Contact />
         
         {/* Section Separator 5 */}
         <div className="relative h-16 flex items-center justify-center">
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-green-500/30 to-transparent h-0.5"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/30 to-transparent h-0.5"></div>
         </div>
         
         <Footer />
