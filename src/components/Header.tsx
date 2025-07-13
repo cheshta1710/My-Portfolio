@@ -24,7 +24,7 @@ const Header: React.FC = () => {
     <header className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
       scrolled ? 'bg-slate-900/95 backdrop-blur-xl border-b border-blue-500/20 shadow-lg shadow-blue-500/10' : 'bg-transparent'
     }`}>
-      <nav className="py-8 px-16">
+      <nav className="py-8 px-8 md:px-16 lg:px-24 xl:px-32">
         <div className="flex items-center justify-between max-w-7xl mx-auto">
           {/* Revolving CA Logo */}
           <div className="relative">
