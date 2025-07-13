@@ -21,9 +21,6 @@ const Footer: React.FC = () => {
         <div className="grid md:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="space-y-6 animate-fade-in-up">
-            <div className="text-xs font-bold bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent border border-blue-400/30 rounded-lg px-3 py-1 box-shadow: 0 0 10px rgba(59, 130, 246, 0.5), 0 0 20px rgba(59, 130, 246, 0.3)" style={{fontFamily: 'Copperplate Gothic Bold, serif', boxShadow: '0 0 10px rgba(59, 130, 246, 0.5), 0 0 20px rgba(59, 130, 246, 0.3)'}}>
-              Cheshta Agarwal
-            </div>
             <p className="text-gray-400 text-sm leading-relaxed" style={{fontFamily: 'Candara, sans-serif'}}>
               DevOps Engineer passionate about containerization and infrastructure automation.
             </p>

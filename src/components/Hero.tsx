@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
           <div className="space-y-8 animate-fade-in-up">
             {/* Name with Copperplate Gothic Bold */}
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-6xl font-bold text-white glow-border p-8 rounded-lg" style={{fontFamily: 'Copperplate Gothic Bold, serif'}}>
+              <h1 className="text-2xl md:text-4xl font-bold text-white p-8 rounded-lg border-2 border-blue-400/50 shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-500" style={{fontFamily: 'Copperplate Gothic Bold, serif'}}>
                 CHESHTA AGARWAL
               </h1>
               <div className="h-1 w-32 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto animate-expand"></div>
