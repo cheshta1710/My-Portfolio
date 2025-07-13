@@ -9,8 +9,8 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background: #000000;
+  font-family: 'Copperplate Gothic Light', 'Inter', sans-serif;
+  background: #0a0a0a;
   color: #ffffff;
   cursor: none;
 }
@@ -21,16 +21,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: #0a0a0a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #00ffff, #8b5cf6, #ff1493);
+  background: linear-gradient(to bottom, #1e40af, #3b82f6, #60a5fa);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #ff1493, #8b5cf6, #00ffff);
+  background: linear-gradient(to bottom, #60a5fa, #3b82f6, #1e40af);
 }
 
 /* Custom animations */
@@ -75,10 +75,10 @@ body {
 
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    box-shadow: 0 0 20px rgba(30, 64, 175, 0.3);
   }
   50% {
-    box-shadow: 0 0 40px rgba(139, 92, 246, 0.6), 0 0 60px rgba(255, 20, 147, 0.4);
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.6), 0 0 60px rgba(96, 165, 250, 0.4);
   }
 }
 
@@ -108,6 +108,15 @@ body {
   100% {
     opacity: 0;
     transform: scale(0);
+  }
+}
+
+@keyframes rotate-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 
@@ -194,6 +203,10 @@ body {
   animation: expand 1.5s ease-out forwards;
 }
 
+.animate-rotate-slow {
+  animation: rotate-slow 10s linear infinite;
+}
+
 .animation-delay-200 {
   animation-delay: 200ms;
 }
@@ -274,7 +287,7 @@ body {
 
 /* Hover effects */
 .nav-link:hover {
-  color: #00ffff;
+  color: #3b82f6;
 }
 
 .social-icon:hover {
@@ -288,8 +301,21 @@ body {
 
 button:focus,
 a:focus {
-  outline: 2px solid #00ffff;
+  outline: 2px solid #3b82f6;
   outline-offset: 2px;
+}
+
+/* Professional color scheme */
+.bg-professional {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+}
+
+.text-professional {
+  color: #e2e8f0;
+}
+
+.border-professional {
+  border-color: #475569;
 }
 
 /* Responsive adjustments */

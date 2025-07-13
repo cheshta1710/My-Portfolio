@@ -10,38 +10,38 @@ const About: React.FC = () => {
   ];
 
   const skillsFlow = [
-    { category: 'Containerization', skills: ['Docker', 'Podman'], icon: '📦', color: 'from-cyan-400 to-blue-500' },
-    { category: 'Orchestration', skills: ['Kubernetes'], icon: '⚙️', color: 'from-purple-400 to-pink-500' },
-    { category: 'CI/CD', skills: ['Jenkins', 'GitLab CI', 'GitHub Actions'], icon: '🔄', color: 'from-pink-400 to-red-500' },
-    { category: 'Cloud Platforms', skills: ['AWS', 'Azure'], icon: '☁️', color: 'from-indigo-400 to-purple-500' }
+    { category: 'Containerization', skills: ['Docker', 'Podman'], icon: '📦', color: 'from-blue-400 to-blue-600' },
+    { category: 'Orchestration', skills: ['Kubernetes'], icon: '⚙️', color: 'from-blue-500 to-blue-700' },
+    { category: 'CI/CD', skills: ['Jenkins', 'GitLab CI', 'GitHub Actions'], icon: '🔄', color: 'from-blue-600 to-blue-800' },
+    { category: 'Cloud Platforms', skills: ['AWS', 'Azure'], icon: '☁️', color: 'from-blue-700 to-blue-900' }
   ];
 
   return (
-    <section id="about" className="py-20 bg-black relative overflow-hidden">
+    <section id="about" className="py-20 bg-slate-900 relative overflow-hidden">
       {/* Background Animation */}
       <div className="absolute inset-0">
-        <div className="absolute top-10 right-10 w-64 h-64 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-full blur-3xl animate-float-slow"></div>
-        <div className="absolute bottom-10 left-10 w-48 h-48 bg-gradient-to-r from-pink-500/10 to-cyan-500/10 rounded-full blur-3xl animate-float-slow animation-delay-2000"></div>
+        <div className="absolute top-10 right-10 w-64 h-64 bg-gradient-to-r from-blue-500/10 to-blue-600/10 rounded-full blur-3xl animate-float-slow"></div>
+        <div className="absolute bottom-10 left-10 w-48 h-48 bg-gradient-to-r from-blue-600/10 to-blue-700/10 rounded-full blur-3xl animate-float-slow animation-delay-2000"></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-text-shimmer">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white" style={{fontFamily: 'Copperplate Gothic Bold, serif'}}>
             About Me
           </h2>
           
           <div className="grid lg:grid-cols-2 gap-16 mb-20">
             {/* Bio Section */}
             <div className="space-y-8 animate-fade-in-up">
-              <h3 className="text-3xl font-semibold text-white mb-8 relative">
+              <h3 className="text-3xl font-semibold text-white mb-8 relative" style={{fontFamily: 'Copperplate Gothic Bold, serif'}}>
                 Background
-                <div className="absolute -bottom-2 left-0 w-20 h-1 bg-gradient-to-r from-cyan-400 to-purple-500"></div>
+                <div className="absolute -bottom-2 left-0 w-20 h-1 bg-gradient-to-r from-blue-400 to-blue-600"></div>
               </h3>
               <div className="space-y-6">
                 {bulletPoints.map((point, index) => (
                   <div key={index} className="flex items-start space-x-4 group animate-slide-in-left" style={{animationDelay: `${index * 200}ms`}}>
-                    <div className="w-3 h-3 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mt-3 flex-shrink-0 group-hover:scale-150 transition-transform duration-300"></div>
-                    <p className="text-gray-300 leading-relaxed group-hover:text-white transition-colors duration-300">{point}</p>
+                    <div className="w-3 h-3 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full mt-3 flex-shrink-0 group-hover:scale-150 transition-transform duration-300"></div>
+                    <p className="text-gray-300 leading-relaxed group-hover:text-white transition-colors duration-300" style={{fontFamily: 'Copperplate Gothic Light, serif'}}>{point}</p>
                   </div>
                 ))}
               </div>
@@ -57,32 +57,33 @@ const About: React.FC = () => {
 
           {/* Technical Skills Flowchart */}
           <div className="space-y-12">
-            <h3 className="text-3xl font-semibold text-white text-center mb-12 relative">
+            <h3 className="text-3xl font-semibold text-white text-center mb-12 relative" style={{fontFamily: 'Copperplate Gothic Bold, serif'}}>
               Technical Expertise
-              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-cyan-400 to-purple-500"></div>
+              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-blue-400 to-blue-600"></div>
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {skillsFlow.map((category, index) => (
                 <div
                   key={index}
-                  className="group relative bg-black/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-800 hover:border-transparent transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 animate-fade-in-up"
+                  className="group relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-blue-500/50 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 animate-fade-in-up"
                   style={{animationDelay: `${index * 150}ms`}}
                 >
                   {/* Animated background gradient - only border on hover */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-0 group-hover:opacity-100 rounded-2xl p-[2px] transition-opacity duration-500`}>
-                    <div className="w-full h-full bg-black/90 rounded-2xl"></div>
+                    <div className="w-full h-full bg-slate-900/90 rounded-2xl"></div>
                   </div>
                   
                   <div className="relative z-10">
                     <div className="flex items-center space-x-4 mb-6">
                       <div className="text-4xl group-hover:animate-bounce">{category.icon}</div>
-                      <h4 className="text-xl font-semibold text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-cyan-400 group-hover:to-purple-500 transition-all duration-300">{category.category}</h4>
+                      <h4 className="text-xl font-semibold text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-blue-400 group-hover:to-blue-600 transition-all duration-300" style={{fontFamily: 'Copperplate Gothic Bold, serif'}}>{category.category}</h4>
                     </div>
                     <div className="space-y-3">
                       {category.skills.map((skill, skillIndex) => (
                         <div
                           key={skillIndex}
-                          className={`bg-gradient-to-r ${category.color} bg-opacity-10 border border-cyan-500/20 rounded-full px-4 py-2 text-sm text-white hover:text-cyan-300 hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-105`}
+                          className={`bg-gradient-to-r ${category.color} bg-opacity-10 border border-blue-500/20 rounded-full px-4 py-2 text-sm text-white hover:text-blue-300 hover:border-blue-500/50 transition-all duration-300 transform hover:scale-105`}
+                          style={{fontFamily: 'Copperplate Gothic Light, serif'}}
                         >
                           {skill}
                         </div>

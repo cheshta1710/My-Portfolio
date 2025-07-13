@@ -7,27 +7,27 @@ const DevOpsIconsBackground: React.FC = () => {
     {
       name: 'Containerization',
       icons: ['🐳', '📦', '🚢', '⚙️'],
-      gradient: 'from-blue-400 to-cyan-500'
+      gradient: 'from-blue-400 to-blue-600'
     },
     {
       name: 'Cloud & Infrastructure',
       icons: ['☁️', '🌐', '🏗️', '🔧'],
-      gradient: 'from-purple-400 to-pink-500'
+      gradient: 'from-blue-500 to-blue-700'
     },
     {
       name: 'CI/CD & Automation',
       icons: ['🔄', '⚡', '🚀', '🎯'],
-      gradient: 'from-green-400 to-cyan-500'
+      gradient: 'from-blue-600 to-blue-800'
     },
     {
       name: 'Monitoring & Security',
       icons: ['📊', '🔒', '👁️', '🛡️'],
-      gradient: 'from-orange-400 to-red-500'
+      gradient: 'from-blue-700 to-blue-900'
     },
     {
       name: 'Development Tools',
       icons: ['💻', '🔨', '📝', '🎨'],
-      gradient: 'from-indigo-400 to-purple-500'
+      gradient: 'from-blue-800 to-blue-900'
     }
   ];
 
@@ -42,7 +42,7 @@ const DevOpsIconsBackground: React.FC = () => {
   const currentSet = iconSets[currentIconSet];
 
   return (
-    <div className="relative w-80 h-80 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-cyan-500/30 hover:border-purple-500/50 transition-all duration-500 transform hover:scale-105 overflow-hidden">
+    <div className="relative w-80 h-80 bg-gradient-to-br from-blue-500/20 via-blue-600/20 to-blue-700/20 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-blue-500/30 hover:border-blue-400/50 transition-all duration-500 transform hover:scale-105 overflow-hidden">
       {/* Background gradient animation */}
       <div className={`absolute inset-0 bg-gradient-to-br ${currentSet.gradient} opacity-10 transition-all duration-1000`}></div>
       
