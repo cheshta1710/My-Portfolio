@@ -217,6 +217,10 @@ body {
   animation: rotate-slow 10s linear infinite;
 }
 
+.animate-matrix-rain {
+  animation: matrix-rain 3s linear infinite;
+}
+
 .animation-delay-200 {
   animation-delay: 200ms;
 }

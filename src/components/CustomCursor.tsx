@@ -9,20 +9,22 @@ const CustomCursor: React.FC = () => {
     const updateCursor = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
       
-      // Create sparkles when mouse moves
-      const newSparkle = {
-        id: Date.now(),
-        x: e.clientX + (Math.random() - 0.5) * 30,
-        y: e.clientY + (Math.random() - 0.5) * 30,
-        opacity: 1
-      };
-      
-      setSparkles(prev => [...prev.slice(-8), newSparkle]);
-      
-      // Remove sparkles after animation
-      setTimeout(() => {
-        setSparkles(prev => prev.filter(s => s.id !== newSparkle.id));
-      }, 1500);
+      // Create sparkles when mouse moves (reduced frequency)
+      if (Math.random() < 0.3) { // Only 30% chance to create sparkle
+        const newSparkle = {
+          id: Date.now(),
+          x: e.clientX + (Math.random() - 0.5) * 15,
+          y: e.clientY + (Math.random() - 0.5) * 15,
+          opacity: 1
+        };
+        
+        setSparkles(prev => [...prev.slice(-3), newSparkle]); // Reduced from 8 to 3
+        
+        // Remove sparkles after animation
+        setTimeout(() => {
+          setSparkles(prev => prev.filter(s => s.id !== newSparkle.id));
+        }, 1000); // Reduced from 1500ms to 1000ms
+      }
     };
 
     const handleMouseEnter = () => setIsHovering(true);
@@ -75,16 +77,16 @@ const CustomCursor: React.FC = () => {
         }}
       />
       
-      {/* Sparkles */}
+      {/* Sparkles - minimized */}
       {sparkles.map((sparkle) => (
         <div
           key={sparkle.id}
-          className="fixed w-2 h-2 bg-gradient-to-r from-blue-400 to-white rounded-full pointer-events-none z-40 animate-pulse"
+          className="fixed w-1 h-1 bg-gradient-to-r from-blue-400/60 to-white/60 rounded-full pointer-events-none z-40 animate-pulse"
           style={{
             left: sparkle.x,
             top: sparkle.y,
-            opacity: sparkle.opacity,
-            animation: 'sparkle-fade 1.5s ease-out forwards'
+            opacity: sparkle.opacity * 0.4, // Reduced opacity
+            animation: 'sparkle-fade 1s ease-out forwards'
           }}
         />
       ))}

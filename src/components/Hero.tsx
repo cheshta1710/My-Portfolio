@@ -7,14 +7,29 @@ const Hero: React.FC = () => {
       {/* Matrix-like Background Animation */}
       <div className="absolute inset-0">
         {/* Matrix rain effect */}
-        {[...Array(50)].map((_, i) => (
+        {[...Array(100)].map((_, i) => (
           <div
             key={i}
-            className="absolute text-blue-400 text-xs opacity-20 animate-matrix-rain"
+            className="absolute text-blue-400 text-sm opacity-40 animate-matrix-rain"
             style={{
               left: `${Math.random() * 100}%`,
               animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${3 + Math.random() * 2}s`
+              animationDuration: `${2 + Math.random() * 3}s`
+            }}
+          >
+            {String.fromCharCode(0x30A0 + Math.random() * 96)}
+          </div>
+        ))}
+        
+        {/* Additional matrix characters for more density */}
+        {[...Array(50)].map((_, i) => (
+          <div
+            key={`second-${i}`}
+            className="absolute text-green-400 text-xs opacity-30 animate-matrix-rain"
+            style={{
+              left: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 3}s`,
+              animationDuration: `${1.5 + Math.random() * 2}s`
             }}
           >
             {String.fromCharCode(0x30A0 + Math.random() * 96)}
