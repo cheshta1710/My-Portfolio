@@ -24,10 +24,10 @@ const About: React.FC = () => {
         <div className="absolute bottom-10 left-10 w-48 h-48 bg-blue-600/5 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white" style={{fontFamily: 'Copperplate Gothic Bold, serif', textShadow: '0 0 20px rgba(59, 130, 246, 0.8), 0 0 40px rgba(59, 130, 246, 0.4)'}}>
-            About Me
+      <div className="relative z-10">
+        <div className="max-w-6xl">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white" style={{fontFamily: 'Copperplate Gothic Bold, serif', textShadow: '0 0 20px rgba(59, 130, 246, 0.8), 0 0 40px rgba(59, 130, 246, 0.4), 0 0 60px rgba(59, 130, 246, 0.2)'}}>
+            ABOUT ME
           </h2>
           
           <div className="grid lg:grid-cols-2 gap-16 mb-20">

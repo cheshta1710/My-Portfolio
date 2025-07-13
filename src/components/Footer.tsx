@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
         <div className="absolute bottom-10 right-1/4 w-48 h-48 bg-gradient-to-r from-pink-500/5 to-cyan-500/5 rounded-full blur-3xl animate-float-slow animation-delay-2000"></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="relative z-10">
         <div className="grid md:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="space-y-6 animate-fade-in-up">

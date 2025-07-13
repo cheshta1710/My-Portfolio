@@ -19,14 +19,14 @@ const Hero: React.FC = () => {
         <div className="absolute top-0 right-0 w-px h-full bg-gradient-to-b from-transparent via-blue-500/20 to-transparent"></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center max-w-4xl mx-auto">
+      <div className="relative z-10">
+        <div className="text-center max-w-4xl">
           {/* Main Content */}
           <div className="space-y-8 animate-fade-in-up">
             {/* Name with Copperplate Gothic Bold */}
             <div className="space-y-4">
               <h1 className="text-5xl md:text-7xl font-bold text-white glow-border p-8 rounded-lg" style={{fontFamily: 'Copperplate Gothic Bold, serif'}}>
-                Cheshta Agarwal
+                CHESHTA AGARWAL
               </h1>
               <div className="h-1 w-32 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto animate-expand"></div>
             </div>

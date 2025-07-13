@@ -31,10 +31,10 @@ const Contact: React.FC = () => {
         <div className="absolute bottom-20 right-20 w-48 h-48 bg-gradient-to-r from-pink-500/10 to-cyan-500/10 rounded-full blur-3xl animate-float-slow animation-delay-2000"></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-text-shimmer">
-            Get In Touch
+      <div className="relative z-10">
+        <div className="max-w-4xl">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-text-shimmer" style={{textShadow: '0 0 20px rgba(34, 211, 238, 0.8), 0 0 40px rgba(147, 51, 234, 0.4), 0 0 60px rgba(236, 72, 153, 0.2)'}}>
+            GET IN TOUCH
           </h2>
           
           <div className="grid md:grid-cols-2 gap-16">
