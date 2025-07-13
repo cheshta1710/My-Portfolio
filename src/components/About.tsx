@@ -21,7 +21,7 @@ const About: React.FC = () => {
     },
     { 
       category: 'Orchestration', 
-      skills: ['Kubernetes', 'Docker Swarm', 'Service Discovery', 'Load Balancing'], 
+      skills: ['Kubernetes', 'Service Discovery'], 
       icon: '⚙️', 
       color: 'from-blue-500 to-blue-700',
       description: 'Container orchestration and cluster management'
@@ -35,7 +35,7 @@ const About: React.FC = () => {
     },
     { 
       category: 'Cloud Platforms', 
-      skills: ['AWS', 'Azure', 'GCP', 'Cloud Infrastructure'], 
+      skills: ['AWS', 'Azure'], 
       icon: '☁️', 
       color: 'from-blue-700 to-blue-900',
       description: 'Cloud computing platforms and services'
@@ -109,8 +109,13 @@ const About: React.FC = () => {
                         className="absolute bottom-full mb-6 left-1/2 transform -translate-x-1/2 z-50 animate-fade-in-up"
                         onMouseEnter={() => setHoveredCategory(category.category)}
                         onMouseLeave={() => setHoveredCategory(null)}
+                        style={{
+                          left: index >= 2 ? 'auto' : '50%',
+                          right: index >= 2 ? '0' : 'auto',
+                          transform: index >= 2 ? 'translateX(0)' : 'translateX(-50%)'
+                        }}
                       >
-                        <div className="bg-slate-900/95 backdrop-blur-xl rounded-xl p-6 w-96 border border-blue-400/30 shadow-2xl">
+                        <div className="bg-slate-900/95 backdrop-blur-xl rounded-xl p-6 w-80 border border-blue-400/30 shadow-2xl">
                           {/* Header */}
                           <div className="flex items-start space-x-4 mb-4">
                             <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-full flex items-center justify-center text-xl flex-shrink-0`}>
