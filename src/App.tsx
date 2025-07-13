@@ -15,12 +15,14 @@ function App() {
       <CustomCursor />
       <ScrollProgress />
       <Header />
-      <Hero />
-      <About />
-      <Projects />
-      <Resume />
-      <Contact />
-      <Footer />
+      <div className="space-y-32">
+        <Hero />
+        <About />
+        <Projects />
+        <Resume />
+        <Contact />
+        <Footer />
+      </div>
     </div>
   );
 }

@@ -4,43 +4,22 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 const Hero: React.FC = () => {
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
-      {/* Matrix-like Background Animation */}
+      {/* Clean Professional Background */}
       <div className="absolute inset-0">
-        {/* Matrix rain effect */}
-        {[...Array(100)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute text-blue-400 text-sm opacity-40 animate-matrix-rain"
-            style={{
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${2 + Math.random() * 3}s`
-            }}
-          >
-            {String.fromCharCode(0x30A0 + Math.random() * 96)}
-          </div>
-        ))}
-        
-        {/* Additional matrix characters for more density */}
-        {[...Array(50)].map((_, i) => (
-          <div
-            key={`second-${i}`}
-            className="absolute text-green-400 text-xs opacity-30 animate-matrix-rain"
-            style={{
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${1.5 + Math.random() * 2}s`
-            }}
-          >
-            {String.fromCharCode(0x30A0 + Math.random() * 96)}
-          </div>
-        ))}
+        {/* Subtle gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-slate-900 to-black"></div>
         
         {/* Subtle grid pattern */}
-        <div className="absolute inset-0 opacity-5" style={{
+        <div className="absolute inset-0 opacity-10" style={{
           backgroundImage: `radial-gradient(circle at 1px 1px, rgba(59, 130, 246, 0.3) 1px, transparent 0)`,
           backgroundSize: '50px 50px'
         }}></div>
+        
+        {/* Subtle accent lines */}
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent"></div>
+        <div className="absolute top-0 left-0 w-px h-full bg-gradient-to-b from-transparent via-blue-500/20 to-transparent"></div>
+        <div className="absolute top-0 right-0 w-px h-full bg-gradient-to-b from-transparent via-blue-500/20 to-transparent"></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">

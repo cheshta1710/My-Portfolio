@@ -26,7 +26,7 @@ const About: React.FC = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white glow-border p-6 rounded-lg" style={{fontFamily: 'Copperplate Gothic Bold, serif'}}>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white" style={{fontFamily: 'Copperplate Gothic Bold, serif', textShadow: '0 0 20px rgba(59, 130, 246, 0.8), 0 0 40px rgba(59, 130, 246, 0.4)'}}>
             About Me
           </h2>
           
