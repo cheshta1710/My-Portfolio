@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import DevOpsIconsBackground from './DevOpsIconsBackground';
 
 const About: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
 
   const bulletPoints = [
     'Aspiring DevOps Engineer with hands-on experience in containerization, orchestration, and CI/CD pipeline development.',
@@ -41,10 +41,6 @@ const About: React.FC = () => {
       description: 'Cloud computing platforms and services'
     }
   ];
-
-  const handleCategoryClick = (category: string) => {
-    setSelectedCategory(selectedCategory === category ? null : category);
-  };
 
   return (
     <section id="about" className="py-20 bg-black relative overflow-hidden">
@@ -87,7 +83,7 @@ const About: React.FC = () => {
 
           {/* Technical Skills Timeline */}
           <div className="space-y-12">
-            <h3 className="text-3xl font-semibold text-white text-center mb-12 relative" style={{fontFamily: 'Copperplate Gothic Bold, serif'}}>
+            <h3 className="text-3xl font-semibold text-white text-center mb-12 relative inline-block px-8 py-4 bg-gradient-to-r from-blue-900/50 to-blue-800/50 rounded-lg border border-blue-400/30" style={{fontFamily: 'Copperplate Gothic Bold, serif'}}>
               Technical Expertise
               <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-blue-400 to-blue-600"></div>
             </h3>
@@ -104,8 +100,45 @@ const About: React.FC = () => {
                     key={index}
                     className="group relative flex flex-col items-center animate-fade-in-up cursor-pointer"
                     style={{animationDelay: `${index * 200}ms`}}
-                    onClick={() => handleCategoryClick(category.category)}
+                    onMouseEnter={() => setHoveredCategory(category.category)}
+                    onMouseLeave={() => setHoveredCategory(null)}
                   >
+                    {/* Hover Popup */}
+                    {hoveredCategory === category.category && (
+                      <div className="absolute bottom-full mb-4 left-1/2 transform -translate-x-1/2 z-50">
+                        <div className="bg-slate-900/95 backdrop-blur-xl rounded-2xl p-6 max-w-xs w-full border border-blue-400/30 shadow-2xl">
+                          {/* Header */}
+                          <div className="flex items-center space-x-3 mb-4">
+                            <div className={`w-10 h-10 bg-gradient-to-r ${category.color} rounded-full flex items-center justify-center text-lg`}>
+                              {category.icon}
+                            </div>
+                            <div>
+                              <h4 className="text-lg font-bold text-white" style={{fontFamily: 'Copperplate Gothic Bold, serif'}}>
+                                {category.category}
+                              </h4>
+                              <p className="text-gray-400 text-xs">{category.description}</p>
+                            </div>
+                          </div>
+                          
+                          {/* Skills Grid */}
+                          <div className="grid grid-cols-2 gap-2">
+                            {category.skills.map((skill, skillIndex) => (
+                              <div
+                                key={skillIndex}
+                                className={`bg-gradient-to-r ${category.color} bg-opacity-10 border border-blue-500/20 rounded-lg px-3 py-2 text-center text-white text-sm hover:text-blue-300 hover:border-blue-500/50 transition-all duration-300`}
+                                style={{fontFamily: 'Candara, sans-serif'}}
+                              >
+                                {skill}
+                              </div>
+                            ))}
+                          </div>
+                          
+                          {/* Arrow */}
+                          <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-slate-900/95"></div>
+                        </div>
+                      </div>
+                    )}
+                    
                     {/* Timeline Node */}
                     <div className={`w-20 h-20 bg-gradient-to-r ${category.color} rounded-full flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-2xl`}>
                       {category.icon}
@@ -127,56 +160,6 @@ const About: React.FC = () => {
           </div>
         </div>
       </div>
-
-      {/* Popup Modal */}
-      {selectedCategory && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={() => setSelectedCategory(null)}>
-          <div className="bg-slate-900/95 backdrop-blur-xl rounded-2xl p-8 max-w-md w-full border border-blue-400/30" onClick={(e) => e.stopPropagation()}>
-            {(() => {
-              const category = skillsFlow.find(cat => cat.category === selectedCategory);
-              if (!category) return null;
-              
-              return (
-                <div className="space-y-6">
-                  {/* Header */}
-                  <div className="flex items-center space-x-4">
-                    <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-full flex items-center justify-center text-2xl`}>
-                      {category.icon}
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-white" style={{fontFamily: 'Copperplate Gothic Bold, serif'}}>
-                        {category.category}
-                      </h3>
-                      <p className="text-gray-400 text-sm">{category.description}</p>
-                    </div>
-                  </div>
-                  
-                  {/* Skills Grid */}
-                  <div className="grid grid-cols-2 gap-3">
-                    {category.skills.map((skill, skillIndex) => (
-                      <div
-                        key={skillIndex}
-                        className={`bg-gradient-to-r ${category.color} bg-opacity-10 border border-blue-500/20 rounded-lg px-4 py-3 text-center text-white hover:text-blue-300 hover:border-blue-500/50 transition-all duration-300 transform hover:scale-105`}
-                        style={{fontFamily: 'Candara, sans-serif'}}
-                      >
-                        {skill}
-                      </div>
-                    ))}
-                  </div>
-                  
-                  {/* Close Button */}
-                  <button
-                    onClick={() => setSelectedCategory(null)}
-                    className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold py-3 px-6 rounded-xl hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-500 transform hover:scale-105"
-                  >
-                    Close
-                  </button>
-                </div>
-              );
-            })()}
-          </div>
-        </div>
-      )}
     </section>
   );
 };

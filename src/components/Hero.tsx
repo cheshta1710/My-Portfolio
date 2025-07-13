@@ -3,7 +3,7 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
+    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black py-16">
       {/* Plain Black Background */}
       <div className="absolute inset-0">
         {/* Subtle grid pattern */}
@@ -19,13 +19,13 @@ const Hero: React.FC = () => {
         <div className="absolute top-0 right-0 w-px h-full bg-gradient-to-b from-transparent via-blue-500/20 to-transparent"></div>
       </div>
 
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-8">
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-12">
         <div className="text-center max-w-4xl mx-auto">
           {/* Main Content */}
-          <div className="space-y-8 animate-fade-in-up">
+          <div className="space-y-12 animate-fade-in-up">
             {/* Name with Copperplate Gothic Bold */}
-            <div className="space-y-4">
-              <h1 className="text-4xl md:text-6xl font-bold text-white glow-border p-8 rounded-lg" style={{fontFamily: 'Copperplate Gothic Bold, serif'}}>
+            <div className="space-y-6">
+              <h1 className="text-4xl md:text-6xl font-bold text-white glow-border p-12 rounded-lg" style={{fontFamily: 'Copperplate Gothic Bold, serif'}}>
                 CHESHTA AGARWAL
               </h1>
               <div className="h-1 w-32 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto animate-expand"></div>
@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
             </p>
             
             {/* Social Links */}
-            <div className="flex justify-center space-x-8 pt-8 animate-fade-in-up animation-delay-1500">
+            <div className="flex justify-center space-x-8 pt-12 animate-fade-in-up animation-delay-1500">
               <a
                 href="https://github.com/cheshta1710"
                 target="_blank"
