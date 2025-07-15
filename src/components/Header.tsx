@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Home, User, Code, Mail, Download } from 'lucide-react';
+// Optionally import Book or FileText icon for blogs
+import { Book } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -70,6 +72,17 @@ const Header: React.FC = () => {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
               </span>
             </button>
+            <button
+              onClick={() => scrollToSection('tech-blogs')}
+              className="nav-link group flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-all duration-300 font-medium px-4 py-2"
+              data-cursor-hover
+            >
+              <Book size={18} className="group-hover:animate-bounce" />
+              <span className="relative">
+                Tech Blogs
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+              </span>
+            </button>
             
             <button
               onClick={() => scrollToSection('resume')}
@@ -95,6 +108,57 @@ const Header: React.FC = () => {
               </span>
             </button>
           </div>
+        </div>
+        {/* Mobile Navigation */}
+        <div className="flex md:hidden items-center justify-between mt-4 space-x-2">
+          <button
+            onClick={() => scrollToSection('hero')}
+            className="nav-link flex items-center space-x-1 text-gray-300 hover:text-blue-400 transition-all duration-300 font-medium px-2 py-1 text-sm"
+            data-cursor-hover
+          >
+            <Home size={16} />
+            <span>Home</span>
+          </button>
+          <button
+            onClick={() => scrollToSection('about')}
+            className="nav-link flex items-center space-x-1 text-gray-300 hover:text-blue-400 transition-all duration-300 font-medium px-2 py-1 text-sm"
+            data-cursor-hover
+          >
+            <User size={16} />
+            <span>About</span>
+          </button>
+          <button
+            onClick={() => scrollToSection('projects')}
+            className="nav-link flex items-center space-x-1 text-gray-300 hover:text-blue-400 transition-all duration-300 font-medium px-2 py-1 text-sm"
+            data-cursor-hover
+          >
+            <Code size={16} />
+            <span>Projects</span>
+          </button>
+          <button
+            onClick={() => scrollToSection('tech-blogs')}
+            className="nav-link flex items-center space-x-1 text-gray-300 hover:text-blue-400 transition-all duration-300 font-medium px-2 py-1 text-sm"
+            data-cursor-hover
+          >
+            <Book size={16} />
+            <span>Tech Blogs</span>
+          </button>
+          <button
+            onClick={() => scrollToSection('resume')}
+            className="nav-link flex items-center space-x-1 text-gray-300 hover:text-blue-400 transition-all duration-300 font-medium px-2 py-1 text-sm"
+            data-cursor-hover
+          >
+            <Download size={16} />
+            <span>Resume</span>
+          </button>
+          <button
+            onClick={() => scrollToSection('contact')}
+            className="nav-link flex items-center space-x-1 text-gray-300 hover:text-blue-400 transition-all duration-300 font-medium px-2 py-1 text-sm"
+            data-cursor-hover
+          >
+            <Mail size={16} />
+            <span>Contact</span>
+          </button>
         </div>
       </nav>
     </header>
