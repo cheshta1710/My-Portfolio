@@ -12,7 +12,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="bg-black min-h-screen text-white overflow-x-hidden cursor-none px-8 md:px-16 lg:px-24 xl:px-32 py-10">
+    <div className="bg-black min-h-screen text-white overflow-x-hidden cursor-none px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 py-6 md:py-10">
       <CustomCursor />
       <ScrollProgress />
       <Header />
@@ -32,6 +32,10 @@ function App() {
         </div>
         
         <Projects />
+        {/* Section Separator between Projects and Tech Blogs */}
+        <div className="relative h-16 flex items-center justify-center">
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/30 to-transparent h-0.5"></div>
+        </div>
         <TechBlogs />
         
         {/* Section Separator 3 */}

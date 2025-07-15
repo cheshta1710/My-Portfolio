@@ -56,7 +56,7 @@ const About: React.FC = () => {
             ABOUT ME
           </h2>
           
-          <div className="grid lg:grid-cols-2 gap-16 mb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 mb-10 md:mb-20">
             {/* Bio Section */}
             <div className="space-y-8 animate-fade-in-up">
               <h3 className="text-3xl font-semibold text-white mb-8 relative" style={{fontFamily: 'Copperplate Gothic Bold, serif'}}>

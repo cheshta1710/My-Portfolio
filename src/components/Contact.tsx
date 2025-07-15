@@ -37,7 +37,7 @@ const Contact: React.FC = () => {
             GET IN TOUCH
           </h2>
           
-          <div className="grid md:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
             {/* Contact Info */}
             <div className="space-y-10 animate-slide-in-left">
               <div className="flex items-center space-x-6 group">
@@ -63,7 +63,7 @@ const Contact: React.FC = () => {
 
             {/* Contact Form */}
             <div className="relative animate-slide-in-right">
-              <form onSubmit={handleSubmit} className="bg-black/50 backdrop-blur-sm p-10 rounded-2xl space-y-8 border border-blue-500/20 hover:border-blue-400/50 transition-all duration-500">
+              <form onSubmit={handleSubmit} className="bg-black/50 backdrop-blur-sm p-4 md:p-10 rounded-2xl space-y-6 md:space-y-8 border border-blue-500/20 hover:border-blue-400/50 transition-all duration-500">
                 <div className="relative group">
                   <input
                     type="text"

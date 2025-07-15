@@ -47,9 +47,9 @@ const Projects: React.FC = () => {
       <div className="relative z-10 w-full max-w-6xl mx-auto px-8">
         <div className="max-w-6xl">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white" style={{fontFamily: 'Copperplate Gothic Bold, serif', textShadow: '0 0 20px rgba(59, 130, 246, 0.8), 0 0 40px rgba(59, 130, 246, 0.4), 0 0 60px rgba(59, 130, 246, 0.2)'}}>
-            FEATURED PROJECTS
+            PROJECTS
           </h2>
-          <div className="grid md:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
             {projects.map((project, index) => (
               <div
                 key={project.id}
@@ -60,7 +60,7 @@ const Projects: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl p-[2px]">
                   <div className="w-full h-full bg-black/90 rounded-2xl"></div>
                 </div>
-                <div className="relative z-10 p-8">
+                <div className="relative z-10 p-4 md:p-8">
                   <div className="aspect-video mb-6 overflow-hidden rounded-xl">
                     <img
                       src={project.image}
@@ -68,9 +68,9 @@ const Projects: React.FC = () => {
                       className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
                     />
                   </div>
-                  <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-blue-400 group-hover:to-blue-600 transition-all duration-300" style={{fontFamily: 'Copperplate Gothic Bold, serif'}}>{project.title}</h3>
-                  <p className="text-gray-300 mb-6 group-hover:text-gray-200 transition-colors duration-300" style={{fontFamily: 'Candara, sans-serif'}}>{project.description}</p>
-                  <div className="flex flex-wrap gap-3 mb-6">
+                  <h3 className="text-lg md:text-2xl font-semibold text-white mb-3 md:mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-blue-400 group-hover:to-blue-600 transition-all duration-300" style={{fontFamily: 'Copperplate Gothic Bold, serif'}}>{project.title}</h3>
+                  <p className="text-gray-300 mb-4 md:mb-6 group-hover:text-gray-200 transition-colors duration-300 text-sm md:text-base" style={{fontFamily: 'Candara, sans-serif'}}>{project.description}</p>
+                  <div className="flex flex-wrap gap-2 md:gap-3 mb-4 md:mb-6">
                     {project.technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}

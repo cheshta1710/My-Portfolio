@@ -17,13 +17,13 @@ const Resume: React.FC = () => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl animate-pulse-slow"></div>
       </div>
 
-      <div className="relative z-10 w-full max-w-4xl mx-auto px-8">
+      <div className="relative z-10 w-full max-w-4xl mx-auto px-4 md:px-8">
         <div className="max-w-4xl text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white" style={{fontFamily: 'Copperplate Gothic Bold, serif', textShadow: '0 0 20px rgba(59, 130, 246, 0.8), 0 0 40px rgba(59, 130, 246, 0.4), 0 0 60px rgba(59, 130, 246, 0.2)'}}>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 md:mb-8 text-white" style={{fontFamily: 'Copperplate Gothic Bold, serif', textShadow: '0 0 20px rgba(59, 130, 246, 0.8), 0 0 40px rgba(59, 130, 246, 0.4), 0 0 60px rgba(59, 130, 246, 0.2)'}}>
             DOWNLOAD RESUME
           </h2>
           
-          <p className="text-gray-400 mb-12 max-w-2xl mx-auto text-lg animate-fade-in-up animation-delay-500" style={{fontFamily: 'Candara, sans-serif'}}>
+          <p className="text-gray-400 mb-8 md:mb-12 max-w-2xl mx-auto text-base md:text-lg animate-fade-in-up animation-delay-500" style={{fontFamily: 'Candara, sans-serif'}}>
             Get a comprehensive overview of my experience, skills, and achievements in DevOps engineering and containerization.
           </p>
           
