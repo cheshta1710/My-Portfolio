@@ -19,7 +19,7 @@ const Resume: React.FC = () => {
 
       <div className="relative z-10 w-full max-w-4xl mx-auto px-4 md:px-8">
         <div className="max-w-4xl text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 md:mb-8 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(59,130,246,0.7)] border-2 border-white/80 rounded-xl px-4 py-2 shadow-blue-400/60 text-center" style={{fontFamily: 'Copperplate Gothic Bold, serif', textShadow: '0 0 24px #3b82f6, 0 0 48px #60a5fa'}}>DOWNLOAD RESUME</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 md:mb-8 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(59,130,246,0.7)] text-center" style={{WebkitTextStroke: '2px #3b82f6', fontFamily: 'Copperplate Gothic Bold, serif', textShadow: '0 0 24px #3b82f6, 0 0 48px #60a5fa'}}>DOWNLOAD RESUME</h2>
           
           <p className="text-gray-400 mb-8 md:mb-12 max-w-2xl mx-auto text-base md:text-lg animate-fade-in-up animation-delay-500" style={{fontFamily: 'Candara, sans-serif'}}>
             Get a comprehensive overview of my experience, skills, and achievements in DevOps engineering and containerization.

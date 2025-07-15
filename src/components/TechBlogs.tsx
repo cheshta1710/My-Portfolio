@@ -8,7 +8,7 @@ const TechBlogs: React.FC = () => (
       <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-blue-600/5 rounded-full blur-3xl animate-float-slow animation-delay-3000"></div>
     </div>
     <div className="relative z-10 w-full max-w-6xl mx-auto px-8">
-      <h2 className="text-4xl md:text-5xl font-bold text-center mb-10 md:mb-16 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(59,130,246,0.7)] border-2 border-white/80 rounded-xl px-4 py-2 shadow-blue-400/60" style={{fontFamily: 'Copperplate Gothic Bold, serif', textShadow: '0 0 24px #3b82f6, 0 0 48px #60a5fa'}}>TECH BLOGS</h2>
+      <h2 className="text-4xl md:text-5xl font-bold text-center mb-10 md:mb-16 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(59,130,246,0.7)]" style={{WebkitTextStroke: '2px #3b82f6', fontFamily: 'Copperplate Gothic Bold, serif', textShadow: '0 0 24px #3b82f6, 0 0 48px #60a5fa'}}>TECH BLOGS</h2>
       <div className="flex flex-col md:flex-row gap-6 md:gap-8 justify-center items-stretch">
         {/* Blog 1 */}
         <div className="flex-1 bg-black/60 border border-blue-500/20 rounded-2xl p-4 md:p-8 flex flex-col justify-between shadow-lg hover:shadow-blue-500/30 transition-all duration-300 animate-fade-in-up mb-4 md:mb-0">
