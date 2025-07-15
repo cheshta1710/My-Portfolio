@@ -46,7 +46,7 @@ const Projects: React.FC = () => {
       </div>
       <div className="relative z-10 w-full max-w-6xl mx-auto px-8">
         <div className="max-w-6xl">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(59,130,246,0.7)]" style={{WebkitTextStroke: '2px #3b82f6', fontFamily: 'Copperplate Gothic Bold, serif', textShadow: '0 0 24px #3b82f6, 0 0 48px #60a5fa'}}>PROJECTS</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white" style={{fontFamily: 'Copperplate Gothic Bold, serif', textShadow: '0 0 20px rgba(59, 130, 246, 0.8), 0 0 40px rgba(59, 130, 246, 0.4), 0 0 60px rgba(59, 130, 246, 0.2)'}}>PROJECTS</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
             {projects.map((project, index) => (
               <div
