@@ -42,6 +42,14 @@ const TechBlogs: React.FC = () => (
             <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
           </a>
         </div>
+        {/* Blog 5 */}
+        <div className="flex-1 bg-black/60 border border-blue-500/20 rounded-2xl p-4 md:p-8 flex flex-col justify-between shadow-lg hover:shadow-blue-500/30 transition-all duration-300 animate-fade-in-up animation-delay-800">
+          <h3 className="text-lg md:text-xl font-semibold text-white mb-4 md:mb-6" style={{fontFamily: 'Copperplate Gothic Bold, serif'}}>The Hidden Commands Behind Ctrl+C and Ctrl+Z: Mastering Unix Process Control</h3>
+          <a href="https://medium.com/@cheshtaagarwal17/the-hidden-commands-behind-ctrl-c-and-ctrl-z-mastering-unix-process-control-49a15201fe68" target="_blank" rel="noopener noreferrer" className="mt-auto flex items-center justify-between bg-gradient-to-r from-blue-500 to-blue-600 text-white px-3 md:px-4 py-2 rounded-lg font-semibold shadow hover:from-blue-600 hover:to-blue-400 transition-all duration-300 group text-sm md:text-base" data-cursor-hover>
+            <span>Read on Medium</span>
+            <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
+          </a>
+        </div>
       </div>
     </div>
   </section>
